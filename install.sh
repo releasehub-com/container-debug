@@ -25,13 +25,13 @@ else
 fi
 
 
-if [[ $PACKAGE_MANAGER -eq "apk" ]]; then
+if [[ $PACKAGE_MANAGER == "apk" ]]; then
   apk update
   apk add curl vim procps net-tools lsof
-elif [[ $PACKAGE_MANAGER -eq "apt-get" ]]; then
+elif [[ $PACKAGE_MANAGER == "apt-get" ]]; then
   apt-get update
   apt-get install -y curl vim procps inetutils-tools net-tools lsof
-elif [[ $PACKAGE_MANAGER -eq "yum" ]]; then
+elif [[ $PACKAGE_MANAGER == "yum" ]]; then
   yum makecache
   yum install curl vim procps lsof
 fi
